@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
-import { getDatabase } from "../../../server/src/db/mongodb.js";
-import type { User, UserResponse } from "../types/User.types.js";
+import { getDatabase } from "@/db/mongodb.js";
+import type { User, UserResponse } from "@/types/User.types.js";
 
 export const loginUserService = async (identifier: string, password: string): Promise<UserResponse> => {
     const db = getDatabase();

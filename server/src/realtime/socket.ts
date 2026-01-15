@@ -1,8 +1,8 @@
 import { Server } from "socket.io";
 import jwt from "jsonwebtoken";
-import { registerPresence } from "./presence.js";
-import { registerMovement } from "./movement.js";
-import { registerRooms } from "./rooms.js";
+import { registerPresence } from "@/realtime/presence.js";
+import { registerMovement } from "@/realtime/movement.js";
+import { registerRooms } from "@/realtime/rooms.js";
 
 export function initSocket(server: any) {
   const io = new Server(server, {

@@ -1,5 +1,5 @@
 import jwt, { type JwtPayload } from 'jsonwebtoken';
-import userModel from '../models/User.modal.js';
+import userModel from '@/models/User.modal.js';
 import type { NextFunction, Request, Response } from 'express';
 
 interface IUserPayload extends JwtPayload {

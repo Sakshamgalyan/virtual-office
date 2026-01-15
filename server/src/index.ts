@@ -2,9 +2,9 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import http from "http";
-import connectTODb from "./db/mongodb.js";
-import app from "./app.js";
-import { initSocket } from "./realtime/socket.js";
+import connectTODb from "@/db/mongodb.js";
+import app from "@/app.js";
+import { initSocket } from "@/realtime/socket.js";
 
 const port = process.env.PORT || 4000;
 
@@ -15,7 +15,7 @@ async function startServer() {
     const server = http.createServer(app);
 
     initSocket(server);
-    
+
     server.listen(port, () => {
       console.log(`Server running on port ${port}`);
     });

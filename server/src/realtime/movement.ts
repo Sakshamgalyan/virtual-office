@@ -1,4 +1,4 @@
-import { getUsers } from "./presence.js";
+import { getUsers } from "@/realtime/presence.js";
 
 export function registerMovement(io: any, socket: any) {
     socket.on("move", (pos: { x: number; y: number; z: number }) => {
