@@ -1,0 +1,1 @@
+export { login as POST } from "../../../../../Backend/src/controllers/User.controller";
