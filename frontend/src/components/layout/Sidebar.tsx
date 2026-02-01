@@ -59,7 +59,7 @@ export default function Sidebar() {
 
     const handleLogout = async () => {
         const { data } = await api.post("/users/logout");
-        if(data === "success"){
+        if (data === "success") {
             router.push('/');
         }
     };
@@ -180,7 +180,7 @@ export default function Sidebar() {
     return (
         <aside
             className={cn(
-                "fixed left-0 top-0 z-40 h-screen transition-all duration-300 ease-in-out flex flex-col border-r border-[#163832] bg-[#0b2b26] overflow-y-auto",
+                "fixed left-0 top-0 z-40 h-screen transition-all duration-300 ease-in-out flex flex-col border-r border-[#163832]/50 bg-gradient-to-b from-[#0b2b26]/90 via-[#0b2b26]/70 to-[#163832]/90 backdrop-blur-md",
                 isSidebarCollapsed ? "w-16" : "w-64"
             )}
         >

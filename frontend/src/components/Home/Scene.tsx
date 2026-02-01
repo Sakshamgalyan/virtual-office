@@ -1,14 +1,17 @@
+import { useState } from "react";
 import Avatar from "./Avatar";
+import Office from "./Office";
+import ThirdPersonCamera from "./ThirdPersonCamera";
+import * as THREE from "three";
 
 export default function Scene() {
+  const [playerPosition, setPlayerPosition] = useState(new THREE.Vector3(0, 0, 0));
+
   return (
     <>
-      <mesh rotation={[-Math.PI / 2, 0, 0]}>
-        <planeGeometry args={[50, 50]} />
-        <meshStandardMaterial color="#e5e7eb" />
-      </mesh>
-
-      <Avatar />
+      <Office />
+      <Avatar onPlayerPositionChange={setPlayerPosition} />
+      <ThirdPersonCamera target={playerPosition} />
     </>
   );
 }
